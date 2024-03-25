@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Receipt</title>
+</head>
+<style>
+
+
+
+        /* Desktop */
+    @media only screen and (min-width: 960px) {
+
+        .outer {
+            max-width: 600px;
+        }
+
+        .container {
+            max-width: 500px;
+
+        }
+
+        .logo img {
+            max-width: 110px; 
+        }
+
+        #date {
+            font-weight: 700; 
+            font-size: 20px;
+        } 
+        
+        #button {
+            max-width: 300px;
+        }
+
+        .col-1{
+            width: 27px !important;
+            text-align: left !important;
+        }
+
+        .col-2 {
+            width: 248px !important;
+            text-align: left !important;
+        }
+
+        #truck img, #location img, #cost img {
+            width: 27px !important;
+        }
+
+        #ship, #address, #price {
+            width: 296px !important;
+        }
+
+        .items {
+            width: 248;
+            text-align: left !important;
+        }
+      }
+
+
+    /* Tablet */
+    @media only screen and (max-width: 960px) {
+        .container {
+            width: 500px;
+        }
+
+        .logo img {
+            max-width: 110px; 
+        }
+
+        .col-1{
+            width: 27px !important;
+            text-align: left !important;
+        }
+
+        .col-2 {
+            width: 248px !important;
+            text-align: left !important;
+        }
+
+        #date {
+            font-weight: 700; 
+            font-size: 20px;
+        } 
+ 
+        #button {
+            max-width: 300px;
+        }
+
+        #truck img, #location img, #cost img {
+            width: 27px !important;
+        }
+
+        #ship, #address, #price {
+            width: 296px !important;
+        } 
+
+        
+
+        }
+
+    /* Mobile */
+    @media only screen and (max-width: 600px) {
+        .container {
+            width: 100%;
+        }
+
+        .section-wrap {
+            padding-left:32px !important;
+            padding-right:32px !important;
+        }
+        
+        #date {
+            font-weight: 700; 
+            font-size: 20px;
+        } 
+        
+        #button {
+            max-width: 300px;
+        }
+
+
+        .col-1{
+            width: 27px !important;
+            text-align: left !important;
+        }
+
+        .col-2 {
+            width: 248px !important;
+            text-align: left !important;
+        }
+
+        
+
+        #watch img, #glasses img {
+            width: 147px !important;
+        }
+
+        
+
+       
+
+    }
+
+    /* X-tra Small */
+    @media only screen and (max-width: 380px) {
+
+        .outer {
+            width: 95% !important;           
+        }
+
+        table.container {
+            width: 100% !important;
+            padding-right: 12px !important;
+            padding-left: 12px !important;
+        }
+
+        .logo {
+            width: 50% !important;
+            height: auto !important;
+        }
+
+        .logo img {
+            padding-top: .5em !important;
+            width: 50% !important;
+           
+            
+        }
+
+       .section-wrap {
+            padding-left:10px !important;
+            padding-right:10px !important;
+        } 
+
+        #date {
+            font-weight: 700 !important; 
+            font-size: 12px !important;
+        } 
+
+        #greeting {
+            font-size: 10px !important;
+        } 
+
+        td#btn {
+            padding: 10px 14px !important;
+        }
+        
+        .button {
+            font-size: 12px !important; 
+            line-height: 14px !important;
+        }
+
+        .col-1, .col-2 {
+            width: 100% !important;
+        }
+
+        #ship, #address, #price, #watch, #glasses {
+            width: 100% !important;
+        } 
+
+        #truck img, #location img, #cost img {
+            display:none !important;
+        }
+
+      
+   
+
+        #truck-info, #location-info, #cost-info {
+            text-align: center !important;
+            width: 100% !important;
+        }
+
+        .item-info p {   
+            font-size: 10px !important;
+            font-weight: 700 !important;
+        }
+
+        #item-title {
+            font-weight: 700 !important; 
+            font-size: 14px !important;
+            width: 100% !important;
+        }
+
+        #item-count {
+            font-weight: 700 !important; 
+            font-size: 16px !important;
+            width: 100% !important;
+        }
+
+        #watch img, #glasses img {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+
+
+    }
+
+</style>
+<body>
+    <!--Start of HTML Email-->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <!--Start of Outter Container-->
+    <tr>
+        <td style="font-family: 'Lato', Arial, Helvetica, sans-serif;">
+            <table style=" max-width: 600px;" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                <tr>
+                    <td>
+                        <table class="outer" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                            <!--Start of Header-->
+                            <tr>
+                                <td width="100%" style="background-color: #f6f9fc; max-width: 37.5em; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);" align="center">
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" class="container" style="background-color: #f5f5f5;">
+                                        <tr>
+                                            <td align="center" style="padding-top: 30px; padding-bottom: 20px;" class="logo">
+                                                <a href="amazon.com" target="_blank">
+                                                    <img src="https://parkerd23.github.io/AmazonReceipt/Photos/amazon-logo.png" alt="Amazon Logo" width="100%" height="auto" border="0">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                            <!--End of Header--><!--https://parkerd23.github.io/AmazonReceipt/Photos/watch.png-->
+                            <!--Start of Inner Container-->
+                                    <table class="container" style="padding-right: 20px; padding-left: 20px;" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tr>
+                                            <td style="border: 2px solid #cbcbcb; width: 100%; background-color: #ffffff; padding-top: 20px; padding-bottom: 40px;">
+                                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                    <tr>
+                                                        <td>
+                                                         <table class="section-wrap" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                              <!--Start of Package Greeting-->
+                                                              <tr>
+                                                                <td width="100%" align="center">
+                                                                   <p id="greeting">
+                                                                    Hi Frank B., your package will arrive:
+                                                                   </p>
+                                                                   <p id="date" style="color: green;">
+                                                                    Monday, June 12 
+                                                                   </p> 
+                                                                </td>
+                                                            </tr>
+                                                             <!--End of Package Greeting-->
+                                                             <!--Start of Tracking Button-->
+                                                             <tr>
+                                                                <td id="btn" style="padding-top: 32px; padding-bottom: 32px; padding-left: 50px; padding-right: 50px;">
+                                                                    <table cellspacing="0" cellpadding="0" border="0" role="presentation" align="center" width="100%">
+                                                                        <tr>
+                                                                            <td style="background-color: #f1c65D; border-radius: 2px;">
+                                                                                <a href="#"  class="button" style="font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif; font-size: 17px; line-height: 18px; color:#111; border: 1px solid #f1c65D; text-decoration: none; font-weight: bold;padding: 12px 5px;  display: block; border-radius: 4px; text-align: center;">Track Package</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                            <!--End of Tracking Button -->
+                                                            <!--Start of Spacer-->
+                                                            <tr>
+                                                                <td style="min-width:1px"  height="35"></td>
+                                                             </tr>
+                                                            <!--End of Spacer-->
+                                                            <!--Start of Shipping Details max-width="296"-->
+                                                            <tr>
+                                                                <td>
+                                                                   <table id="ship" width="100%" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                        <tr>
+                                                                            <td>
+                                                                               <!--Start of Column 1-->
+                                                                               <table class="col-1" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+                                                                                <tr>
+                                                                                    <td id="truck" class="section-wrap" style="vertical-align: top; width: 27px; border: none; padding-right: 21px; padding-bottom: 15px;">
+                                                                                        <a href="#">
+                                                                                            <img src="https://parkerd23.github.io/AmazonReceipt/Photos/truck-img.png" alt="Truck Image" width="100%" height="auto" border="0">
+                                                                                        </a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                </table>
+                                                                                <!--End of Column 1-->
+                                                                                <!--Start of Column 2-->
+                                                                                <table class="col-2" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+                                                                                <tr>
+                                                                                    <td id="truck-info" style="vertical-align: top; text-align: left;" class="section-wrap item-info">
+                                                                                        <p style="margin-top: -2px; color: #868686; font-size: 15px; line-height: 15px; font-weight:bold;">ON THE WAY</p>
+                                                                                        <p style="color: #111111; font-size: 16px; line-height: 20px;">3 items</p>
+                                                                                        <p style="margin-top: -2px; color:#111111; font-size: 15px; line-height: 15px;">Order #555-5555555-5555555</p>
+                                                                                        <p style="margin-top: -2px; color:#868686; font-size: 15px; line-height: 15px;">A delivery driver may contact you by text or call you for help on the day of delivery.</p>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                </table>
+                                                                                <!--End of Column 2--> 
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>                    
+                                                            <!--End of Shipping Details-->
+                                                             <!--Start of Spacer-->
+                                                             <tr>
+                                                                <td style="min-width: 1;" height="35"></td>
+                                                             </tr>
+                                                             <!--End of Spacer-->
+                                                             <!--Start of Shipping Address-->
+                                                             <tr>
+                                                                <td>
+                                                                    <table id="address" width="100%" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                        <tr>    
+                                                                            <td>
+                                                                                <!--Start of Column 1-->
+                                                                                <table class="col-1" width="100%" role="presentation" cellspacing="0" cellpadding="0" border="0" align="left">
+                                                                                    <tr>
+                                                                                        <td id="location" class="section-wrap" style="vertical-align: top; width: 27px; border: none; padding-right: 21px; padding-bottom: 15px;">
+                                                                                            <a href="#">
+                                                                                                <img src="https://parkerd23.github.io/AmazonReceipt/Photos/location-img.png" alt="Map Logo" width="100%" height="auto"  border="0">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                                <!--End of Column 1-->
+                                                                                <!--Start of Column 2-->
+                                                                                <table class="col-2"  role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+                                                                                    <tr>
+                                                                                        <td id="location-info" class="section-wrap item-info" style="vertical-align: top; text-align: left;">
+                                                                                            <p style="margin-top: -2px; color: #868686; font-size: 15px; line-height: 15px; font-weight: bold;">SHIP TO</p>
+                                                                                            <p style="color: #111111; font-size: 15px; line-height: 20px;">Parker B.</p>
+                                                                                            <p style="margin-top: -2px; line-height: 18px; color: #111111; font-size: 15px;">55 Center Dr. Topeka, KS 33377</p>
+                                                                                            
+                                                                                        </td>
+                                                                                    </tr>       
+                                                                                </table>
+                                                                                <!--End of Column 2-->
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>       
+                                                                </td>
+                                                             </tr>
+                                                             <!--End of Shipping Address-->
+                                                             <!--Start of Spacer-->
+                                                             <tr>
+                                                                <td style="min-width: 1;" height="35"></td>
+                                                             </tr>
+                                                             <!--End of Spacer-->
+                                                             <!--Start of Shipping Total-->
+                                                             <tr>
+                                                                <td>
+                                                                    <table id="price" width="100%" max-width="296" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                        <tr>
+                                                                            <td>
+                                                                     <!--Start of Column 1-->
+                                                                                <table class="col-1" width="100%" role="presentation" cellspacing="0" cellpadding="0" border="0" align="left">
+                                                                                    <tr>
+                                                                                        <td id="cost" class="section-wrap" style="vertical-align: top; width: 27px; border: none; padding-right: 21px; padding-bottom: 15px;">
+                                                                                            <a href="#">
+                                                                                                <img src="https://parkerd23.github.io/AmazonReceipt/Photos/price-tag-img.png" alt="Price Tag" width="100%" height="auto" border="0">
+                                                                                            </a>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                     <!--End of Column 1-->
+                                                                     <!--Start of Column 2-->
+                                                                                <table class="col-2" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
+                                                                                    <tr>
+                                                                                        <td id="cost-info" class="section-wrap item-info" style="vertical-align: top; text-align: left;">
+                                                                                            <p style="margin-top: -2px; color: #868686; font-size: 15px; line-height: 15px; font-weight: bold;">SHIPMENT TOTAL</p>
+                                                                                            <p style="color:#0066c0; font-size: 16px; line-height: 20px;">$19.56</p>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                     <!--End of Column 2-->
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                             </tr>
+                                                             <!--End of Shipping Total-->
+                                                             <!--Start of Spacer-->
+                                                             <tr>
+                                                                <td style="min-width: 1px;" height="8"></td>
+                                                             </tr>
+                                                             <!--End of Spacer-->
+                                                             <!--Start of Return-->
+                                                             <tr>
+                                                                <td>
+                                                                    <table max-width="296" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                        <tr>
+                                                                            <td align="center" class="section-wrap item-info">
+                                                                                <p style="color: #868686; font-size: 15px; line-height: 15px;">
+                                                                                    Return or Replace items in <span><a href="#" style="text-decoration: none; color:#0066c0;">Your Order</a></span>
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                             </tr>
+                                                             <!--End of Return-->
+                                                             <!--Start of Spacer-->
+                                                             <tr>
+                                                                <td style="min-width: 1px;" height="8"></td>
+                                                             </tr>
+                                                             <!--End of Spacer-->
+                                                             <!--Start of Recycle-->
+                                                             <tr>
+                                                                <td class="section-wrap item-info" style="padding-bottom: 40px;" align="center">
+                                                                    <p style="max-width: 296; color:#868686; font-size: 15px; line-height: 20px;">
+                                                                        Learn how to recycle your packaging <br />at<span><a href="#" style="color:#0066c0; text-decoration: none;"> Paradise Second Chance.</a></span>
+                                                                    </p>
+                                                                </td>
+                                                             </tr>
+                                                             <!--End of Recycle-->
+                                                             <!--Start of Keep Shopping Section-->
+                                                             <tr>
+                                                                <td>
+                                                                    <table style="max-width:296px;" role="presentation" cellspacing="0" cellpadding="0" border="0"   align="center" width="100%">
+                                                                        <tr>
+                                                                            <td class="section-wrap item-info" style="padding-top: 30px; padding-bottom: 10px; border-top: 2px solid #d6d6d6; width: 100%; max-width:296px;" align="center">
+                                                                                <p style="color:#cc6600; font-size: 18px;">
+                                                                                    Keep shopping for
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                      <!--Start of Recent Items-->
+                                                                        <tr>
+                                                                            <td >
+                                                                                <table max-width="296" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <!--Start of Column 1-->
+                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="147">
+                                                                                                <tr>
+                                                                                                    <td id="watch" class="section-wrap">
+                                                                                                        <a href="#">
+                                                                                                            <img src="https://parkerd23.github.io/AmazonReceipt/Photos/watch.png" alt="Wrist Watch Image" width="100%" height="auto" border="0">
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td align="center" class="section-wrap item-info">
+                                                                                                        <p>
+                                                                                                            <a href="#" style="text-decoration: none; color: #565656; text-align: center;">Timex Watch</a>
+                                                                                                        </p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <!--End of Column 1-->
+                                                                                            <!--Start of Column 2-->
+                                                                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="147" align="center">
+                                                                                                <tr>
+                                                                                                    <td id="glasses" class="section-wrap"><a href="#">
+                                                                                                            <img src="https://parkerd23.github.io/AmazonReceipt/Photos/glasses.png" alt="Image of Books" width="100%" height="auto" border="0">
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td align="center" style="padding-bottom: 30px;" class="section-wrap item-info">
+                                                                                                        <p>
+                                                                                                            <a href="#" style="text-decoration: none; color: #565656; text-align: center;">Warby Parker Eyewear</a>
+                                                                                                        </p>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                            <!--End of Column 2-->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                      <!--End of Recent Items-->
+                                                                      <!--Start of Footer-->
+                                                                            <tr>
+                                                                                <td style="padding-top: 20px; border-top: 2px solid #d6d6d6; width: 100%;">
+                                                                                    <table max-width="296" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                                                                                        <tr>
+                                                                                            <td class="section-wrap" style="padding-top: 30px; max-width:296px;" align="center">
+                                                                                                <p style="font-size: 11px; line-height: 11px; color: #868686;" align="left">
+                                                                                                    Unless otherwise noted, items sold by Paradise.com are subject to sales tax in select states in accordance with the applicable laws of that state. If your order contains one or more items from a seller other than Paradise.com, it may be subject to state and local sales tax, depending upon the sellers business policies and the location of their operations. Learn more about<span><a href="#" style="color:#0066c0; text-decoration: none;"> tax seller information.</a></span>
+                                                                                                </p>
+                                                                                                <p style="font-size: 11px; line-height: 11px; color: #868686;" align="left">
+                                                                                                    Your invoice can be accessed<span><a href="#" style="color:#0066c0; text-decoration: none;"> here.</a></span>
+                                                                                                </p>
+                                                                                                <p style="font-size: 11px; line-height: 11px; color: #868686;" align="left">
+                                                                                                    This email was sent from a notification-only address that cannot accept incoming email. Do not reply to this message.
+                                                                                                </p>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                      <!--End of Footer-->
+                                                                </table>
+                                                                </td>
+                                                             </tr>
+
+                                                         </table>
+                                                          </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+ </table>
+
+                            
+</body>
+</html>
